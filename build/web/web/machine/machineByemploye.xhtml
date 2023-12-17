@@ -21,7 +21,7 @@
                         <p:ajax update="datalist" process="@this"/>
                         <f:selectItem itemLabel="Select employee" itemValue="#{null}" noSelectionOption="true"/>
                         <f:selectItems value="#{employeController.items}" var="employe"
-                                       itemLabel="#{employe.nom}" itemValue="#{employe}"/>
+                                       itemLabel="#{employe.nom} #{employe.prenom}" itemValue="#{employe}"/>
                     </p:selectOneMenu>
 
                     <p:dataTable id="datalist" value="#{employeController.machinesForSelectedEmploye}" var="item"
